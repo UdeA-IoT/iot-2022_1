@@ -33,8 +33,6 @@ En el laboratorio hay un gran numero de elementos para prototipado. En la siguie
 |Base Shield V2| Base para facil conexión de componentes con el arduino uno ([link](https://wiki.seeedstudio.com/Base_Shield_V2/))|
 |Grove Base Shield for NodeMCU V1.0|Tarjeta para conexión plug&play de componentes electronicos con la placa NodeMCU ([link](https://wiki.seeedstudio.com/Grove_Base_Shield_for_NodeMCU_V1.0/))|
 
-
-
 ## Sistemas de desarrollo
 
 A continuación se van a tratar de manera muy breve los conocimientos basicos necesarios para trabajar con los sistemas de desarrollo. Para empezar, lo mas importante consiste en el **Cacharreo** y la **creatividad**, por lo demas, en internet hay un monton de recursos, videos y tutoriales cuya calidad supera en creces a la aqui expuesta de modo que nuestro objetivo será solamente se va hacer enfasis en los pasos necesarios y básicos para empezar.
@@ -90,6 +88,8 @@ A continuación se van a tratar de manera muy breve los conocimientos basicos ne
 * https://docs.ai-thinker.com/en/esp32s2
 * https://nodemcu.readthedocs.io/en/release/
 * https://www.elecrow.com/wiki/index.php?title=Main_Page
+* https://github.com/josejuansanchez/iot-demo
+* 
 
 
 
