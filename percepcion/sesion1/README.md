@@ -36,7 +36,8 @@ En el laboratorio hay un gran numero de elementos para prototipado. En la siguie
 
 
 ## Sistemas de desarrollo
-* https://esphome.io/index.html
+
+A continuación se van a tratar de manera muy breve los conocimientos basicos necesarios para trabajar con los sistemas de desarrollo. Para empezar, lo mas importante consiste en el **Cacharreo** y la **creatividad**, por lo demas, en internet hay un monton de recursos, videos y tutoriales cuya calidad supera en creces a la aqui expuesta de modo que nuestro objetivo será solamente se va hacer enfasis en los pasos necesarios y básicos para empezar.
 
 ### Arduino UNO R3
 
@@ -57,8 +58,10 @@ En el laboratorio hay un gran numero de elementos para prototipado. En la siguie
 
 ### Tarjeta de desarrollo NodeMCU-32S
 
-![nodemcu-esp_32s](nodemcu-esp_32s.jpg)
+## Enlaces
 
+![nodemcu-esp_32s](nodemcu-esp_32s.jpg)
+* https://esphome.io/index.html
 ![nodemcu_32s_pionut](nodemcu_32s_pin.png)
 
 * https://blog.uelectronics.com/tarjetas-desarrollo/internet-of-things/como-instalar-las-placas-esp32-y-programarlas/
