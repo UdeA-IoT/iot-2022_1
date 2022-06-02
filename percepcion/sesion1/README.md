@@ -15,6 +15,8 @@ No obstante como recomendación le sugerimos que le pegue una ojeada a las diapo
 * **Leccion 1**: Getting Started - Introduction to IoT ([link](https://github.com/microsoft/IoT-For-Beginners/blob/main/slides/lesson-1.pdf))
 * **Leccion 2**: A deep dive! ([link](https://github.com/microsoft/IoT-For-Beginners/blob/main/slides/lesson-2.pdf)).
 
+Adicionalmente se recomienda mirar la pagina [Random Nerd Tutorials](https://randomnerdtutorials.com/) pues esta contiene una gran cantidad de ejemplos resueltos
+
 ## Herramientas del laboratorio  
 
 En el laboratorio hay un gran numero de elementos para prototipado. En la siguiente tabla describe los elementos de hardware que usaremos en este laboratorio:
