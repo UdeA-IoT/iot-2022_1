@@ -94,22 +94,63 @@ La siguiente tabla resume el mapa de pines de manera mas simplificada.
 |Digital SPI|```SC [CS]```, ```S1 [MOSI]```, ```S0 [MISO]```, ```SK [SDCLK]```|
 
 
+El nombre de los pines de NodeMCU tiene una nomenclatura diferente de la que utiliza el ESP8266.
 
+Por ejemplo los pines D0, D1, y D2 en la NodeMCU correponden con GPIO16, 5 y 4 en el ESP8266 tal y como se muestra en la siguiente tabla tomada de wikipedia.
 
-[ESP8266 Pinout Reference: Which GPIO pins should you use?](
+|IO index|ESP8266 pin|
+|----|----|
+|D0 |GPIO16 |
+|D1	|GPIO5 |
+|D2	|GPIO4 |
+|D3	|GPIO0 |
+|D4	|GPIO2 |
+|D5	|GPIO14 |
+|D6	|GPIO12 | 
+|D7	|GPIO13 |
+|D8	|GPIO15 |
+|D9	|GPIO3 |
+|D10 |GPIO1 |
+|D11 |GPIO9 |
+|D12 |GPIO10| |
+
+Para mas información al respecto puede consultar el link [ESP8266 Pinout Reference: Which GPIO pins should you use?](
 https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/)
-
-
-
-
 
 ### Tarjeta de desarrollo NodeMCU-32S
 
-## Enlaces
+Un sistema de desarrollo ESP32 (por ejemplo el NodeMCU-32S) esta basado en el microcontrolador ESP32 el cual cuenta con funcionalidad Wi-Fi y Bluetooth. La tarjeta de desarrollo opera a 3.3 V y es alimentada a traves de una conexión micro-USB de 5 V o directamente a 3.3 V a traves del pin VIN. Cuando se usa esta tarjeta de desarrollo es importante tener en cuenta que los pines GPIO no son tolerantes a 5 V, y la maxima corriente que pueden suministrar es de 12 mA.
+
+![esp32](esp32.png)
+
+La siguiente figura muestra el diagrama de pines asociado a la tarjeta de desarrollo [Nodemcu-32s WIFI MODULE](https://docs.ai-thinker.com/_media/esp32/docs/nodemcu-32s_product_specification.pdf).
 
 ![nodemcu-esp_32s](nodemcu-esp_32s.jpg)
-* https://esphome.io/index.html
+
+Tal y como se muestra en la siguiente figura, el modulo Nodemcu-32s tiene un total de 38 puertos:
+
 ![nodemcu_32s_pionut](nodemcu_32s_pin.png)
+
+La siguiente tabla resume la función principal algunos de estos:
+
+|Tipo|Notación pines (placa)|
+|---|---|
+|Digital (Only input)|```P34 [GPIO34]```, ```P35 [GPIO35]```, ```SVP [GPIO36]```, ```SVN [GPIO39]```|
+|Analog in|```SVP [GPIO36]```, ```SVN [GPIO39]```, ```P35 [GPIO 35]```, <br>```P34 [GPIO34]```, ```P32 [GPIO32]```, ```P33 [GPIO 33]```, <br>```P25 [GPIO25]```, ```P26 [GPIO26]```, ```P27 [GPIO27]```, <br>```P14 [GPIO14]```, ```P12 [GPIO12]```,  ```P13 [GPIO13]```, <br>```P15 [GPIO15]```, ```P2 [GPIO2]```, ```P0 [GPIO0]```, <br>```P4 [GPIO4]```|
+|PWM|```SVP [GPIO36]```, ```SVN [GPIO39]```, ```P35 [GPIO 35]```, <br>```P34 [GPIO 34]```, ```P32 [GPIO 32]```, ```P33 [GPIO 33]```, <br>```P25 [GPIO25]```, ```P26 [GPIO26]```, ```P27 [GPIO27]```, <br>```P14 [GPIO14]```, ```P12 [GPIO12]```,  ```P13 [GPIO13]```, <br>```P15 [GPIO15]```, ```P2 [GPIO2]```, ```P0 [GPIO0]```, <br>```P4 [GPIO4]```|
+|Serial (UART)|```Tx [GPI1]```, ```Rx [GPI3]```, ```D8 [TXD2]```, ```D7 [RXD2]```|
+|I2C|```P22 [GPI22/SCL]```, ```P21 [GPI21/SDA]```|
+|Digital SPI|```P23 [MOSI]```, ```P19 [MISO]```, ```P18 [SCK]```, ```P5 [SS]```|
+|Flash SPI|```CLK [GPIO6/FLASHCLK]```, ```SD0 [GPIO7/FLASHD0]```, <br>```SD1 [GPIO7/FLASHD1]```, ```CMD [GPIO7/FLASHCMD]```,<br> ```SD2 [GPIO9/FLASHD2]```, ```SD3 [GPIO9/FLASHD3]```|
+|Capacitive touch|```P0 [GPIO4]/TOUCH1```, ``` P4 [GPIO0]/TOUCH0```, <br>``` P2 [GPIO2/TOUCH2]```, ``` P15 [GPIO15/TOUCH3]```, <br>``` P13 [GPIO13/TOUCH4]```, ``` P12 [GPIO12/TOUCH5]```,<br> ``` P14 [GPIO14/TOUCH6]```, ``` P27 [GPIO7/TOUCH7]```|
+
+
+## Notas
+
+* Esta es una versión preliminar por lo que no esta excenta de errores. Se invita a comentarnos si ve un error para corregirlo.
+
+
+## Enlaces
 
 * https://blog.uelectronics.com/tarjetas-desarrollo/internet-of-things/como-instalar-las-placas-esp32-y-programarlas/
 * https://www.waveshare.com/nodemcu-32s.htm
@@ -139,17 +180,6 @@ https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/)
 * https://learn.sparkfun.com/tutorials/esp8266-thing-hookup-guide/introduction
 * https://elosciloscopio.com/tutorial-i2c-para-arduino-esp8266-y-esp32/
 * https://www.wikiwand.com/en/NodeMCU
-
-
-
-
-
-
-
-## Pendiente
-1. Compresión sobre los sensores.
-2. 
-
 * https://naylampmechatronics.com/ardusystem-tarjetas/8-uno-r3.html
 * https://docs.espressif.com/projects/arduino-esp32/en/latest/index.html#
 * https://www.espressif.com/en/support/documents/technical-documents
@@ -159,6 +189,11 @@ https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/)
 * https://www.elecrow.com/wiki/index.php?title=Main_Page
 * https://github.com/josejuansanchez/iot-demo
 * https://diyi0t.com/
+* https://naylampmechatronics.com/espressif-esp/384-nodemcu-32-30-pin-esp32-wifi.html
+* https://elosciloscopio.com/
+* https://diyi0t.com/i2c-tutorial-for-arduino-and-esp8266/
+* https://dynamoelectronics.com/tienda/esp32s-board-desarrollo-con-wifi-bluetooth/
+* https://esphome.io/index.html
 
 
 
