@@ -196,6 +196,8 @@ La siguiente tabla resume la función principal algunos de estos:
 * https://diyi0t.com/i2c-tutorial-for-arduino-and-esp8266/
 * https://dynamoelectronics.com/tienda/esp32s-board-desarrollo-con-wifi-bluetooth/
 * https://esphome.io/index.html
+* https://github.com/JonnyBanana/Electronic-Cheat-Sheet-and-Schematics-MegaCollection
+
 
 
 
