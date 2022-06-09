@@ -93,7 +93,6 @@ En el siguiente [link](ESP8266%20cheat%20sheet.pdf) se resumen algunas de las fu
 
 Para usar el **ESP8266 Arduino core** siga las instrucciones mostradas en el siguiente [tutorial](https://learn.sparkfun.com/tutorials/esp8266-thing-hookup-guide/all#installing-the-esp8266-arduino-addon).
 
-
 ## Ejemplos
 
 A continuación se van a mostrar los ejemplos hechos en arduino [link](../arduino_uno/) adaptados a la plataforma ESP8266.
@@ -200,8 +199,12 @@ A continuación se muestra la conexión del ejemplo anterior usando los componen
 
 ### Ejemplo 3
 
-```
-int ledPin = 9;    
+Modifica el brillo de un led (conectado al pin ```D2``` (```GPIO4```)) de manera automatica.
+
+```ino
+/* Pin Definitions */
+const int ledPin = D2; // D1 = GPIO4
+  
 
 void setup() {
   // nothing happens in setup
@@ -222,18 +225,32 @@ void loop() {
 }
 ```
 
+A continuación se muestra el diagrama de conexión usando el [Grove - Red LED](https://wiki.seeedstudio.com/Grove-Red_LED/) para el código anterior:
+
+![fading_esp8266](fading_esp8266_bb.jpg)
+
+
 ### Ejemplo 4
 
+```
+/* Pin Definitions */
+const int ANALOG_PIN = A0; // A0
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  int sensorValue = analogRead(ANALOG_PIN);
+  Serial.println(sensorValue);
+  delay(1);        
+}
+```
+
+Para este caso, se conecto al pin ```A0``` el [Grove - Rotary Angle Sensor](https://wiki.seeedstudio.com/Grove-Rotary_Angle_Sensor/)
 
 
-
-
-
-
-
-
-
-  
+![analogReadSerial_esp8266](analogReadSerial_esp8266_bb.jpg)
 
 
 ## Enlaces
@@ -271,3 +288,9 @@ void loop() {
 * https://randomnerdtutorials.com/home-automation-using-esp8266/
 * https://www.prometec.net/modelos-esp8266/
 * https://acis.org.co/archivos/Conferencias/2018/Conferencia0504.pdf
+* https://www.arduino.cc/reference/en/libraries/adafruit-esp8266/
+* https://learn.adafruit.com/adafruit-huzzah-esp8266-breakout
+* https://www.adafruit.com/product/2471
+* https://learn.adafruit.com/adafruit-io-basics-esp8266-arduino
+* https://www.esp8266.com/wiki/doku.php?id=esp8266-module-family#esp-06
+* https://hackaday.com/tag/esp8266/
