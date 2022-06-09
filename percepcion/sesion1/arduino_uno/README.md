@@ -253,3 +253,4 @@ void loop() {
 * https://learn.adafruit.com/series/learn-arduino
 * https://www.sparkfun.com/products/15631
 * https://learn.sparkfun.com/tutorials/tinker-kit-circuit-guide
+* https://learn.adafruit.com/experimenters-guide-for-metro
