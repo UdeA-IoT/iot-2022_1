@@ -6,16 +6,38 @@ Para hacer posible una conexión empleando Wifi, es necesario contar con un **Ac
 
 ![AP_connection](AP-example2.png)
 
-### Prueba 1
+Los dispositivos que se conectan en una red WiFi pueden ser de dos tipos principalmente: 
+* **Stations (STA)**: Dispositivos que se conectan a una red WiFi.
+* **Access Points (AP)**: Dispositivos que permiten la conexión entre las diferentes estaciones que hacen parte de la red y que sirve como punto de acceso a la red cableada. Un punto de acceso generalmente se integra con un router para proporcionar acceso desde la red WiFi a Internet. Cada punto de acceso es reconocido por un SSID (Service Set IDentifier), que esencialmente es el nombre de la red que es seleccionada al conectar un dispositivo (estación) al WiFi.
 
-Test escaneo
+En lo que respecta al SoC ESP8266 en una red WiFi, este se puede configurar para que funcione en uno de los tres modos que se muestran a continuación:
+*  **Soft Access Point (soft-AP)**: Permite al SoC ESP8266 establecer su propia red WiFi lo cual le permite la conexión de otros dispositivos que funcinan como estaciones. La cantidad máxima de estaciones que pueden estar simultaneamente conectadas al SoftAP puede establecerse de 0 a 8, pero por defecto es 4. 
 
-### Prueba 2
+![soft-AP](https://arduino-esp8266.readthedocs.io/en/3.0.2/_images/esp8266-soft-access-point.png)
+
+* **Station (STA)**: Se utiliza para conectar el módulo ESP a un Access Point de red WiFi establecida.
+
+![access-point](https://arduino-esp8266.readthedocs.io/en/3.0.2/_images/esp8266-station.png)
+
+* **Station (STA) y Soft Access Point (soft-AP)**: Permite al ESP8266 operar simulaneamente como **STAT** y **soft-AP** lo cual, proporciona la posibilidad de construir redes WiFi malladas.
+
+![both](https://arduino-esp8266.readthedocs.io/en/3.0.2/_images/esp8266-station-soft-access-point.png)
+
+### Prueba de test
+
+Antes de empezar a realizar ejemplos, vamos a verificar que el modulo ESP8266 tenga conectividad WiFi, para lo cual vamos a usar un como test un ejemplo de los que vienen integrados tal y como lo muestra la siguiente figura.
+
+![ESP-8266_scan](ESP-8266_scan.png)
+
+En esta prueba, se usa el ESP8266 para enumerar las redes disponibles (Para mas información ver la documentación de la clase [Scan](https://arduino-esp8266.readthedocs.io/en/3.0.2/esp8266wifi/scan-class.html)). 
 
 ## Clases
 
-Para permitir la conexión de una placa Arduino a un red wifi se emplea el **Arduino WiFi**. Esto es posible gracias a la libreria **WiFi** ([link](https://www.arduino.cc/en/Reference/WiFi)) (la cual viene incluida en el Arduino IDE).
-A continuación se muestran las clases de mayor uso de esta libreria:
+La librería ESP8266WiFi se divide en varias clases. En la mayoría de los casos, al escribir el código, el usuario no es conciente de esta clasificación. La siguiente figura muestra las clase de esta libreria:
+
+![clases-ESP8266WiFi](https://esp8266-arduino-spanish.readthedocs.io/es/latest/_images/doxygen-class-index.png)
+
+A continuación se describen algunas de la principales clases .
 
 ### Clase IPAddress 
 
@@ -101,7 +123,9 @@ Por comodidad se muestra el diagrama de pines del disposivo:
 * https://www.esploradores.com/
 * https://tttapa.github.io/ESP8266/Chap01%20-%20ESP8266.html
 * https://www.embedded-robotics.com/esp8266-wifi/
-* 
+* https://create.arduino.cc/projecthub/projects/tags/wifi
+* https://create.arduino.cc/projecthub/projects/tags/esp8266
+
 <!---
 
 The Wi-Fi capabilities are according to IEEE 80.11 b/g/n and provide WPA/WPA2 and WEP authentication but can also connect to open networks.
