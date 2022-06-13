@@ -92,7 +92,16 @@ Por comodidad se muestra el diagrama de pines del disposivo:
 
    **Solución**: [código 6](basico6/README.md)
 
-
+* https://learn.sparkfun.com/tutorials/esp8266-thing-hookup-guide/example-sketch-ap-web-server
+* https://github.com/lrmoreno007/ESP8266-Arduino-Spanish
+* https://github.com/esp8266
+* https://randomnerdtutorials.com/projects-esp8266/
+* https://randomnerdtutorials.com/
+* https://docs.espressif.com/projects/arduino-esp32/en/latest/libraries.html
+* https://www.esploradores.com/
+* https://tttapa.github.io/ESP8266/Chap01%20-%20ESP8266.html
+* https://www.embedded-robotics.com/esp8266-wifi/
+* 
 <!---
 
 The Wi-Fi capabilities are according to IEEE 80.11 b/g/n and provide WPA/WPA2 and WEP authentication but can also connect to open networks.
