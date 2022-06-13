@@ -114,141 +114,7 @@ Por comodidad se muestra el diagrama de pines del disposivo:
 
    **Solución**: [código 6](basico6/README.md)
 
-* https://learn.sparkfun.com/tutorials/esp8266-thing-hookup-guide/example-sketch-ap-web-server
-* https://github.com/lrmoreno007/ESP8266-Arduino-Spanish
-* https://github.com/esp8266
-* https://randomnerdtutorials.com/projects-esp8266/
-* https://randomnerdtutorials.com/
-* https://docs.espressif.com/projects/arduino-esp32/en/latest/libraries.html
-* https://www.esploradores.com/
-* https://tttapa.github.io/ESP8266/Chap01%20-%20ESP8266.html
-* https://www.embedded-robotics.com/esp8266-wifi/
-* https://create.arduino.cc/projecthub/projects/tags/wifi
-* https://create.arduino.cc/projecthub/projects/tags/esp8266
 
-<!---
-
-The Wi-Fi capabilities are according to IEEE 80.11 b/g/n and provide WPA/WPA2 and WEP authentication but can also connect to open networks.
-
-NodeMCU v1.0
-
-Later, when we add other sensors to ESP8266, this module can be replaced with any of the
-other ESP8266 modules.
-
-
-La librería WiFi para ESP8266 ha sido desarrollada basándose en el SDK de ESP8266, usando nombres convencionales y la filosofía de funcionalidades generales de la librería WiFi de Arduino. Con el tiempo, la riqueza de las funciones WiFi del SDK de ESP8266 pasadas a ESP8266/Arduino superan a la librería WiFi de Arduino y se hizo evidente que tenemos que proporcionar documentación por separado sobre lo que es nuevo y extra.
-
-Esta documentación lo guiará a través de varias clases, métodos y propiedades de la librería ESP8266WiFi. Si eres nuevo en C++ y Arduino, no te preocupes. Comenzaremos por conceptos generales y luego pasaremos a la descripción detallada de los miembros de cada clase en particular, incluidos los ejemplos de uso.
-
-El alcance de la funcionalidad que ofrece la biblioteca ESP8266WiFi es bastante extensa y por lo tanto, esta descripción se ha dividido en documentos separados marcados con :arrow_right:.
-
-
-
-
-* https://learn.sparkfun.com/tutorials/esp8266-thing-hookup-guide/installing-the-esp8266-arduino-addon
-* https://tttapa.github.io/ESP8266/Chap07%20-%20Wi-Fi%20Connections.html
-* https://tttapa.github.io/ESP8266/Chap01%20-%20ESP8266.html
-* https://randomnerdtutorials.com/esp8266-nodemcu-access-point-ap-web-server/
-* https://github.com/tttapa?tab=repositories
-* https://tttapa.github.io/ESP8266/Chap07%20-%20Wi-Fi%20Connections.html
-* https://tttapa.github.io/Pages/Arduino/Control-Theory/Motor-Fader/
-* https://www.esploradores.com/
-* 
-
-
-## Librerias Wifi
-
-Para hacer posible una conexión empleando Wifi, es necesario contar con un **Access Point (AP)**. Un **AP** es un dispositivo que permite la conexión de dispositivos Wi-Fi a una red cableada tal y como se muestra en la siguiente figura:
-
-![AP_connection](https://esp8266-arduino-spanish.readthedocs.io/es/latest/_images/esp8266-station-soft-access-point.png)
-
-Para permitir la conexión de una placa Arduino a un red wifi se emplea el **Arduino WiFi**. Esto es posible gracias a la libreria **WiFi** ([link](https://www.arduino.cc/en/Reference/WiFi)) (la cual viene incluida en el Arduino IDE).
-A continuación se muestran las clases de mayor uso de esta libreria:
-
-### Clase WiFi 
-La clase WiFi inicializa la biblioteca de ethernet y la configuración de red. La siguiente tabla muestra algunos de los principales métodos:
-
-|Método|Descripción|Sintaxis|
-|---|---|---|
-|```WiFi.begin()```|Inicializa la configuración de red de la biblioteca WiFi y proporciona el estado actual|```WiFi.begin();``` <br> ```WiFi.begin(ssid);``` <br> ```WiFi.begin(ssid, pass);``` 
-|```WiFi.disconnect()```|Desconecta la placa WiFi de la red actual.|```WiFi.disconnect();```|
-|```WiFi.status()```|Devuelve el estado de la conexión (```WL_CONNECTED```, ```WL_CONNECTION_LOST```, ```WL_DISCONNECTED``` y ```WL_CONNECT_FAILED``` entre otros).|```WiFi.status();```|
-
-
-### Clase IPAddress 
-
-La clase ```IPAddress``` proporciona información sobre la configuración de la red. La siguiente tabla muestra los métodos de la clase ```Wifi``` que son empleados con esta clase:
-
-|Método|Descripción|Sintaxis|
-|---|---|---|
-|```WiFi.localIP()```|Obtiene la dirección IP de la placa WiFi.|```WiFi.localIP();```|
-|```WiFi.subnetMask()```|Obtiene la mascara de subred de la placa WiFi.|```WiFi.subnetMask();```|
-|```WiFi.gatewayIP()```|Obtiene la dirección IP de la puerta de enlace de la placa WiFi.|```WiFi.gatewayIP();```|
-
-### Clase Server
-
-La clase Server crea servidores que pueden enviar y recibir datos de clientes conectados (programas que se ejecutan en otras computadoras o dispositivos). Esta clase, es la clase base de Wifi Server. Para su instanciación se emplea el siguiente constructor:
-
-|Clase|Descripción|Sintaxis del constructor|
-|---|---|---|
-|```WiFiServer```|Crea un servidor que escucha las conexiones entrantes en el puerto especificado.|```Server(port);```|
-
-A continuación se resumen algunos de los principales métodos asociados a esta clase.
-
-|Método|Descripción|Sintaxis|
-|---|---|---|
-|```begin()```|Le dice al servidor que comience a escuchar las conexiones entrantes.|```server.begin();```|
-
-### Clase Client
-
-La clase client crea clientes que pueden conectarse a servidores y enviar y recibir datos.
-
-|Método|Descripción|Sintaxis|
-|---|---|---|
-|```WiFiClient()```|Crea un cliente que puede conectarse a una dirección IP y un puerto de Internet especificados como se define en ```client.connect()```.|```WiFiClient();```|
-|```connected()```|Determina si el cliente está conectado o no |```client.connected();```|
-
-Debido al uso masivo del ESP8266, se creo una libreria WiFi (la cual trata de conservar la filosofia de la libreria original para Arduino) para esta plataforma. Para consultar mas sobre esta libreria puede dirigirse a la sección del [ESP8266WiFi library](https://arduino-esp8266.readthedocs.io/en/latest/esp8266wifi/readme.html) API de [ESP8266 Arduino Core](https://arduino-esp8266.readthedocs.io/en/latest/index.html).
-
-Para mayor información puede consultar:
-1. [Arduino WiFi library](https://www.arduino.cc/en/Reference/WiFi)
-2. [ESP8266 Arduino Core’s](https://arduino-esp8266.readthedocs.io/en/latest/index.html)
-3. [ESP8266 Arduino Core’s en español](https://esp8266-arduino-spanish.readthedocs.io/es/latest/#)
-   
-
-## Ejemplos
-
-A continuación se van a realizar una serie de ejemplos que muestran como conectar las cosas (en nuestro caso el NodeMCU) a la red empleando Wifi. 
-
-Por comodidad se muestra el diagrama de pines del disposivo:
-
-![NodeMCU](https://i1.wp.com/www.teachmemicro.com/wp-content/uploads/2018/04/NodeMCUv3.0-pinout.jpg?ssl=1)
-
-### Básicos
-
-1. El siguiente ejemplo (tomado de la sección [Librería ESP8266WiFi](https://esp8266-arduino-spanish.readthedocs.io/es/latest/esp8266wifi/readme.html)) del manual **ESP8266 Arduino Core** muestra como conectar el modulo ESP a un access point.
-
-   **Solución**: [código 1](basico1/README.md)
-
-2. A veces puede ser útil poner a funcionar un modulo ESP8266 como wireless access point (AP) lo cual le permite establecer su propia red Wifi. 
-
-   **Solución**: [código 2](basico2/README.md)
-
-3. Enunciado en construcción
-
-   **Solución**: [código 3](basico3/README.md)
-
-4. Enunciado en construcción
-
-   **Solución**: [código 4](basico4/README.md)
-
-5. Enunciado en construcción
-
-   **Solución**: [código 5](basico5/README.md)
-
-6. Enunciado en construcción
-
-   **Solución**: [código 6](basico6/README.md)
 
 
 ## Enlaces
@@ -308,5 +174,24 @@ Por comodidad se muestra el diagrama de pines del disposivo:
 53. https://github.com/gamo256/dweet-esp
 54. https://www.hackster.io/javier-munoz-saez/esp8266-sending-data-to-an-online-deskboard-3e7e91
 55. https://www.fatalerrors.org/a/building-a-simple-internet-of-things-project-with-esp8266.html
+56. https://learn.sparkfun.com/tutorials/esp8266-thing-hookup-guide/example-sketch-ap-web-server
+57. https://github.com/lrmoreno007/ESP8266-Arduino-Spanish
+58. https://github.com/esp8266
+59. https://randomnerdtutorials.com/projects-esp8266/
+60. https://randomnerdtutorials.com/
+61. https://docs.espressif.com/projects/arduino-esp32/en/latest/libraries.html
+62. https://www.esploradores.com/
+63. https://tttapa.github.io/ESP8266/Chap01%20-%20ESP8266.html
+64. https://www.embedded-robotics.com/esp8266-wifi/
+65. https://create.arduino.cc/projecthub/projects/tags/wifi
+66. https://create.arduino.cc/projecthub/projects/tags/esp8266
+67. https://learn.sparkfun.com/tutorials/esp8266-thing-hookup-guide/installing-the-esp8266-arduino-addon
+68. https://tttapa.github.io/ESP8266/Chap07%20-%20Wi-Fi%20Connections.html
+69. https://tttapa.github.io/ESP8266/Chap01%20-%20ESP8266.html
+70. https://randomnerdtutorials.com/esp8266-nodemcu-access-point-ap-web-server/
+71. https://github.com/tttapa?tab=repositories
+72. https://tttapa.github.io/ESP8266/Chap07%20-%20Wi-Fi%20Connections.html
+73. https://tttapa.github.io/Pages/Arduino/Control-Theory/Motor-Fader/
+74. https://www.esploradores.com/
 
--->
+
