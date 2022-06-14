@@ -114,9 +114,6 @@ Por comodidad se muestra el diagrama de pines del disposivo:
 
    **Solución**: [código 6](basico6/README.md)
 
-
-
-
 ## Enlaces
 
 1. https://wokwi.com/

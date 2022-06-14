@@ -68,7 +68,13 @@ Antes de empezar, lo primero que debemos realizar es una prueba basica para veri
 
 ## Ejemplos
 
+1. Enunciado en construcción.
 
+   **Solución**: [código 1](./ejemplo1/README.md)
+
+2. Enunciado en construcción.
+
+   **Solución**: [código 2](./ejemplo2/README.md)
 
 ## Enlaces
 
