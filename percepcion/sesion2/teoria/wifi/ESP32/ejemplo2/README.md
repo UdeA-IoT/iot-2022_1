@@ -139,6 +139,12 @@ Donde **IP_ESP32** es la IP que se le asigno a su placa **NODEMCU-ESP32S**, que 
 
 Si todo esta bien, será posible apagar y prender el led integrado en la tarjeta desde el navegador.
 
+### Nota
+
+El ejemplo base (del cual se tomo el analizado previamente) encuentra dentro se los ejemplos que vienen con el IDE de Arduino (una vez se han instalado los plugings correspondientes al ESP32). Este ejemplo es **SimpleWiFiServer**; para acceder siga la siguiente ruta: **Examples > WiFi > SimpleWiFiServer** tal y como se muestra en la siguiente imagen:
+
+![ejemplo_SimpleWiFiServer](ejemplo_SimpleWiFiServer.png)
+
 ## Enlaces 
 
 * https://github.com/paulocsanz?tab=repositories
