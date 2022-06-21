@@ -125,6 +125,8 @@ void loop() {
 }
 ```
 
+**Simulación online ejemplo 1**: [link](https://wokwi.com/projects/335030762714694227)
+
 ### Ejemplo 2
 
 Prender el led integrado de la placa ESP32 cuando se presiona un switch. (Código adaptado para el ESP32 del link [How to Wire and Program a Button](https://docs.arduino.cc/built-in-examples/digital/Button))
@@ -152,6 +154,8 @@ void loop() {
   }
 }
 ```
+
+**Simulación online ejemplo 2**: [link](https://wokwi.com/projects/335034266233602642)
 
 A continuación se muestra el diagrama de conexión para este ejemplo:
 
@@ -182,6 +186,9 @@ void loop() {
   }
 }
 ```
+
+**Simulación online ejemplo 3**: [link](https://wokwi.com/projects/335030762714694227)
+
 
 El diagrama de conexión se muestra a continuación:
 
@@ -217,6 +224,9 @@ void loop() {
   delay(2);
 }
 ```
+
+**Simulación online ejemplo 4**: [link](https://wokwi.com/projects/335035080677261908)
+
 
 El diagrama de conexión se muestra a continuación:
 
