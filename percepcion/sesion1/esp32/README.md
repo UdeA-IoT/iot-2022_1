@@ -236,9 +236,6 @@ Para comprender mejor este ejemplo se recomienda reforzar viendo el link [ESP32 
 
 ## Enlaces
 
-
-
-
 * https://makeabilitylab.github.io/physcomp/esp32/iot.html
 * https://makeabilitylab.github.io/physcomp/resources/uw-courses.html
 * https://randomnerdtutorials.com/esp32-pinout-reference-gpios/
